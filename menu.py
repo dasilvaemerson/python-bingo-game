@@ -1,6 +1,9 @@
 # Python Libraries
 import sys
 
+# My libraries
+import card
+
 class Menu:
     def start():
         print('''
@@ -21,6 +24,7 @@ class Menu:
             print('Starting...\n')
         elif option == 2:
             print('Generating card...\n')
+            print(card.Card.generate_card())
         elif option == 3:
             print('Bye')
             sys.exit(0)
