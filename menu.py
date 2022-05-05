@@ -3,6 +3,7 @@ import sys
 
 # My libraries
 import card
+import game
 
 class Menu:
     def start():
@@ -22,6 +23,7 @@ class Menu:
 
         if option == 1:
             print('Starting...\n')
+            game.Game.start()
         elif option == 2:
             print('Generating card...\n')
             print(card.Card.generate_card())
