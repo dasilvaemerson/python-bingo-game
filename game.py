@@ -25,4 +25,18 @@ class Game:
         print("These are the numbers called: ")
         print(Game.called_numbers)
         print("") # Just a line break
+        Game.bingo_check()
+    
+    def bingo_check():
+        while True:
+            try:
+                number = int(input("Please, enter a number from the bingo card to check if it was called: "))
+            except ValueError:
+                print("Invalid input. ONLY NUMBERS. Try again.\n")
+                Game.bingo_check()
+            if number in Game.called_numbers:
+                print(f"Number {number} OK\n")
+            else:
+                print(f"The number {number} was not called\n")
+                
  
