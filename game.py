@@ -38,5 +38,22 @@ class Game:
                 print(f"Number {number} OK\n")
             else:
                 print(f"The number {number} was not called\n")
+                Game.resume_game()
+
+    def resume_game():
+            answer = "Y"
+            while answer == "Y":
+                print("Keep playing?")
+                answer = input("Y/N: ").upper()
+                if answer == "Y":
+                    print("") # Just a line break
+                    Game.start()
+                elif answer == "N":
+                    print("") # Just a line break
+                    print('End of the game')
+                    sys.exit(0)
+                else:
+                    print("#!# Invalid answer. Try again #!#\n")
+                    answer = "Y"
                 
  
