@@ -19,20 +19,21 @@ class Menu:
     ======================================
     ''')
         option = input('Please enter your choice here: ')
-        option = int(option)
 
-        if option == 1:
+        if option == '1':
             print('Starting...\n')
+            # return "Number 1"
             game.Game.start()
-        elif option == 2:
+        elif option == '2':
             print('Generating card...\n')
             print(card.Card.generate_card())
             Menu.new_card()
-        elif option == 3:
+        elif option == '3':
             print('Bye')
-            sys.exit(0)
+            return sys.exit(0)
         else:
             print('Enter a valid command')
+            return Menu.start() #Restart the Menu Screen
 
     def new_card():
         answer = "Y"

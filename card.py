@@ -12,6 +12,7 @@
 import random
 
 class Card:
+    print_card = ''
     def generate_card():
         """
         Generates a bingo card and stores the numbers in a dictionary.
@@ -47,7 +48,7 @@ class Card:
             if B[i] < 10:
                 B[i] = str(B[i]) + " "
 
-        print_card = (f''' 
+        Card.print_card = (f''' 
     Here is your Bingo Card. Write down your numbers!
 
      B   |   I   |   N   |   G   |   O
@@ -58,5 +59,5 @@ class Card:
      {B[4]}  |   {I[4]}  |   {N[4]}  |   {G[4]}  |   {O[4]}
      ''')
 
-        return print_card
+        return Card.print_card
 
